@@ -1,0 +1,29 @@
+*zargs.txt*  Arg-list helpers
+
+Author:  Jonathan Brink
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                    *zargs*
+
+Zargs provides a few helpers for managing the arg-list.
+
+Usage:
+Zargs filename
+ZargsList
+ZargsRead
+
+The passed-in filename needs to be within 'zargs' directory within the vim-zargs plugin directory.
+
+Examples:
+Zargs "foo" # Populate the arg-list from the contents of the "foo" file
+ZargsList   # Open up the "zargs" directory in a snippet
+ZargsRead   # Populate the arg-list from the contents of the current buffer
+
+
+ABOUT                                           *zargs-about*
+
+Grab the latest version or report a bug on GitHub:
+
+https://github.com/jonbri/vim-zargs
+
+ vim:tw=78:et:ft=help:norl:
