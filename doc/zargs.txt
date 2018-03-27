@@ -16,8 +16,15 @@ The passed-in filename needs to be within 'zargs' directory within the vim-zargs
 
 Examples:
 Zargs "foo" # Populate the arg-list from the contents of the "foo" file
-ZargsList   # Open up the "zargs" directory in a snippet
-ZargsRead   # Populate the arg-list from the contents of the current buffer
+
+                                                *ZargsRead*
+ZargsRead               Populate the arg-list from the contents of the current buffer
+
+                                                *ZargsList*
+ZargsList               Open Netrw to the zargs list directory
+
+                                                *zp*
+zp                      Print out full path to current buffer
 
 
 ABOUT                                           *zargs-about*
