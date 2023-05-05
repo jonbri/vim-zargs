@@ -14,7 +14,7 @@ function! ListZargFiles(A,B,C)
   function! Trans(A)
     return "\"" . substitute(a:A,'.*zargs/\(.*\)$','\1','g') . "\""
   endfunction
-  let l:zargs=split(globpath(&rtp, 'zargs/*'))
+  let l:zargs=split(globpath("$HOME/.config", 'zargs/*'))
   let l:zargsShort=map(l:zargs, 'Trans(v:val)')
   call insert(l:zargsShort, "'%'") " prepend '%'
   return join(l:zargsShort,"\n")
@@ -34,7 +34,7 @@ function! InvokeZargs(...)
     args
   " read in file from zargs dir
   else
-    let g:targetPath=globpath(&rtp, "**/zargs/".a:1)
+    let g:targetPath=globpath("$HOME/.config", "**/zargs/".a:1)
     if g:targetPath == ''
       echom "zargs file not found for ".a:1
     else
